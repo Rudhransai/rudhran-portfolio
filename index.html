@@ -529,25 +529,24 @@
                     <form id="portfolio-contact-form" onsubmit="event.preventDefault();">
                         <!-- Web3Forms Configuration -->
                         <input type="hidden" name="access_key" value="016300fb-91ea-4f55-b790-d240fa9b6335">
-                        <input type="hidden" name="subject" value="New Portfolio Message from Rudhran's Website">
                         <input type="hidden" name="from_name" value="Portfolio Visitor">
                         <div class="form-group-row">
                             <div class="form-group">
                                 <label for="form-name">Your Name</label>
-                                <input type="text" id="form-name" placeholder="John Doe" required>
+                                <input type="text" id="form-name" name="name" placeholder="John Doe" required>
                             </div>
                             <div class="form-group">
                                 <label for="form-email">Your Email</label>
-                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                                <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="form-subject">Subject</label>
-                            <input type="text" id="form-subject" placeholder="Collaboration / Job Opportunity" required>
+                            <input type="text" id="form-subject" name="subject" placeholder="Collaboration / Job Opportunity" required>
                         </div>
                         <div class="form-group">
                             <label for="form-message">Message</label>
-                            <textarea id="form-message" rows="5" placeholder="Hi Rudhran, I viewed your portfolio and..." required></textarea>
+                            <textarea id="form-message" name="message" rows="5" placeholder="Hi Rudhran, I viewed your portfolio and..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full-width" id="form-submit-btn">
                             <span class="btn-text">Send Message</span>
