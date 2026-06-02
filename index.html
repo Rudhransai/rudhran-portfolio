@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudhran Sai C | Professional Interactive Portfolio</title>
+    <meta name="description" content="Portfolio of Rudhran Sai C - Computer Science & Business Systems Student, Software Engineer, and Data Analyst. Featuring the interactive Server-Aware Timing System simulator.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient background glow elements -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-accent">&lt;</span>Rudhran<span class="logo-accent">.Sai /&gt;</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobile-nav-drawer">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#certifications" class="mobile-nav-link">Certifications</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="badge-container">
+                <span class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> Panimalar Engineering Student</span>
+            </div>
+            <h1 class="hero-title">
+                Rudhran Sai C
+            </h1>
+            <h2 class="hero-subtitle">
+                I am a <span class="typing-text" id="typewriter"></span>
+            </h2>
+            <p class="hero-description">
+                A motivated Computer Science & Business Systems student specializing in software engineering, data analytics, and building robust, real-time interactive solutions. Dedicated to creating high-performance, user-centric web applications.
+            </p>
+            <div class="hero-cta">
+                <a href="Rudh_resume.pdf" download="Rudhran_Sai_Resume.pdf" class="btn btn-primary" id="download-resume-btn">
+                    <span class="btn-text">Download Resume</span>
+                    <span class="btn-icon"><i class="fa-solid fa-cloud-arrow-down"></i></span>
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <span class="btn-text">Explore Projects</span>
+                    <span class="btn-icon"><i class="fa-solid fa-arrow-down"></i></span>
+                </a>
+            </div>
+            <div class="social-links-hero">
+                <a href="mailto:rudhransaiccs428@gmail.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/Rudhran%20sai" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <a href="#about"><i class="fa-solid fa-chevron-down scroll-arrow"></i></a>
+        </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">About Me & Education</span></h2>
+            <p class="section-subtitle">Bridging the gap between software development and business strategy</p>
+            
+            <div class="about-grid">
+                <!-- Profile Summary Card -->
+                <div class="about-card glass-panel card-glow-indigo">
+                    <div class="about-card-header">
+                        <div class="avatar-container">
+                            <i class="fa-solid fa-user-tie avatar-placeholder"></i>
+                        </div>
+                        <h3>Academic & Professional Vision</h3>
+                    </div>
+                    <p class="about-text">
+                        Currently pursuing a **B.Tech in Computer Science and Business Systems**, I operate at the intersection of technical engineering excellence and functional business acumen. I aim to apply my programming skills, logical thinking, and analytical frameworks to solve complex modern architectural bottlenecks.
+                    </p>
+                    <p class="about-text">
+                        From designing clock-synchronized distributed logic to developing consent-aware AI-based vision detectors, my work focuses on real-world system fairness, reliability, and security.
+                    </p>
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">8.0</span>
+                            <span class="metric-label">B.Tech CGPA</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-label">Class XII Score</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">3+</span>
+                            <span class="metric-label">Key Certifications</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Card -->
+                <div class="timeline-container glass-panel card-glow-purple">
+                    <h3>Educational Journey</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-cyan"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2023 - 2027</span>
+                                <h4 class="timeline-title">B.Tech (Computer Science & Business Systems)</h4>
+                                <p class="timeline-sub">Panimalar Engineering College, Chennai</p>
+                                <p class="timeline-desc">Focusing on Core Computer Science principles integrated with Business Operations, Data Analytics, Systems Design, and Algorithms. Current Cumulative GPA: 8.0/10.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-purple"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2021 - 2023</span>
+                                <h4 class="timeline-title">Higher Secondary Education (Class XII)</h4>
+                                <p class="timeline-sub">Sethu Bhaskara Matric Higher Secondary School</p>
+                                <p class="timeline-desc">Completed board examinations with a perfect **100%** aggregate score in core academic subjects.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-indigo"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">2019 - 2021</span>
+                                <h4 class="timeline-title">Secondary Education (Class X)</h4>
+                                <p class="timeline-sub">Sethu Bhaskara Matric Higher Secondary School</p>
+                                <p class="timeline-desc">Graduated with a stellar board score of **88%**.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">Internship Experience</span></h2>
+            
+            <div class="experience-card glass-panel card-glow-cyan">
+                <div class="exp-header">
+                    <div class="exp-brand">
+                        <div class="exp-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div>
+                            <h3 class="exp-title">Business Analytics Intern</h3>
+                            <h4 class="exp-company">Codec Technologies</h4>
+                        </div>
+                    </div>
+                    <span class="exp-date">Internship Program</span>
+                </div>
+                <div class="exp-content">
+                    <p class="exp-desc">
+                        Successfully gathered, refined, and analyzed massive business datasets to drive key operational strategies and reporting.
+                    </p>
+                    <ul class="exp-bullet-list">
+                        <li><i class="fa-solid fa-circle-check bullet-icon"></i> <strong>Data Ingestion & Wrangling:</strong> Collected, parsed, and scrubbed dirty raw data, improving data pipeline consistency.</li>
+                        <li><i class="fa-solid fa-circle-check bullet-icon"></i> <strong>Interactive Reporting:</strong> Created intuitive business reports and real-time dashboards to track performance trends.</li>
+                        <li><i class="fa-solid fa-circle-check bullet-icon"></i> <strong>Decision Support:</strong> Derived actionable analytical insights that supported management in strategic planning and process enhancements.</li>
+                    </ul>
+                </div>
+                <!-- Dynamic Interactive Business Dashboard Widget inside Internship card -->
+                <div class="internship-widget">
+                    <div class="widget-header">
+                        <span class="widget-title"><i class="fa-solid fa-database"></i> Live Interactive Analytics Sandbox</span>
+                        <span class="widget-status">Running Sim</span>
+                    </div>
+                    <div class="widget-grid">
+                        <div class="widget-control">
+                            <p class="widget-text">Simulate raw business data cleaning and optimization:</p>
+                            <button id="widget-clean-btn" class="btn btn-small btn-primary">Clean Raw Data</button>
+                        </div>
+                        <div class="widget-display">
+                            <div class="bar-chart-container">
+                                <div class="chart-bar" id="raw-bar" style="height: 90%; background: #ef4444;"><span class="bar-label">Raw Data</span></div>
+                                <div class="chart-bar" id="clean-bar" style="height: 30%; background: #06b6d4;"><span class="bar-label">Optimized</span></div>
+                            </div>
+                            <div class="widget-stats">
+                                <div class="w-stat">Latency: <span id="w-latency" class="highlight-txt">480ms</span></div>
+                                <div class="w-stat">Accuracy: <span id="w-accuracy" class="highlight-txt">72%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">Technical Expertise</span></h2>
+            <p class="section-subtitle">A balanced toolkit designed for performance, scalability, and efficiency</p>
+            
+            <div class="skills-grid">
+                <!-- Skill Category: Programming -->
+                <div class="skill-category glass-panel card-glow-purple">
+                    <div class="skill-cat-header">
+                        <i class="fa-solid fa-code icon-purple"></i>
+                        <h3>Core Programming</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Java (OOP, Data Structures)</span><span class="skill-percent">90%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-purple" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript (ES6+)</span><span class="skill-percent">85%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-purple" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML5 / CSS3 (Grid, Flexbox)</span><span class="skill-percent">95%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-purple" style="width: 95%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Frontend & Web -->
+                <div class="skill-category glass-panel card-glow-indigo">
+                    <div class="skill-cat-header">
+                        <i class="fa-brands fa-react icon-indigo"></i>
+                        <h3>Frontend & Frameworks</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>React.js</span><span class="skill-percent">80%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-indigo" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Express.js</span><span class="skill-percent">75%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-indigo" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Node.js</span><span class="skill-percent">80%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-indigo" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category: Databases & Databases -->
+                <div class="skill-category glass-panel card-glow-cyan">
+                    <div class="skill-cat-header">
+                        <i class="fa-solid fa-database icon-cyan"></i>
+                        <h3>Databases & Architecture</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>PostgreSQL / SQL</span><span class="skill-percent">85%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-cyan" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>GitHub & Version Control</span><span class="skill-percent">90%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-cyan" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>System Clock Synchronization</span><span class="skill-percent">75%</span></div>
+                            <div class="skill-track"><div class="skill-fill fill-cyan" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">Featured Projects</span></h2>
+            <p class="section-subtitle">Real-world implementations focusing on algorithmic fairness, time accuracy, and AI</p>
+
+            <div class="projects-layout">
+                
+                <!-- Project 1: AI Deepfake Detection -->
+                <div class="project-card glass-panel card-glow-purple">
+                    <div class="project-media">
+                        <div class="scanner-container" id="deepfake-scanner">
+                            <div class="scanner-face">
+                                <i class="fa-solid fa-face-smile face-icon"></i>
+                                <div class="scan-overlay"></div>
+                                <div class="scan-grid"></div>
+                                <div class="scan-line"></div>
+                            </div>
+                            <div class="scanner-text" id="scan-log-msg">Hover over to analyze facial data</div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="proj-badge-container">
+                            <span class="proj-badge badge-purple">AI / ML</span>
+                            <span class="proj-badge badge-blue">Python</span>
+                        </div>
+                        <h3>AI-Based Deepfake Detection & Prevention System</h3>
+                        <p class="proj-desc">
+                            Designed and structured an intelligent vision-based deepfake analyzer focusing on ethical AI principles. Utilized Advanced Machine Learning concepts to recognize synthesized anomalies, implement facial mesh tracking, and introduce consent-aware restrictions to protect user privacy.
+                        </p>
+                        <div class="proj-tech">
+                            <span><i class="fa-brands fa-python"></i> Python</span>
+                            <span><i class="fa-solid fa-brain"></i> TensorFlow</span>
+                            <span><i class="fa-solid fa-network-wired"></i> OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Server-Aware Timing System (Interactive Simulator) -->
+                <div class="project-card glass-panel card-glow-indigo wide-card">
+                    <div class="project-details project-full-details">
+                        <div class="proj-badge-container">
+                            <span class="proj-badge badge-indigo">Distributed Logic</span>
+                            <span class="proj-badge badge-cyan">Web Systems</span>
+                            <span class="proj-badge badge-violet">NexusOne</span>
+                        </div>
+                        <h3>Server-Aware Timing System for Online Assessments</h3>
+                        <p class="proj-desc">
+                            In many traditional online examination systems, the timer continues counting down while the server processes answer submissions. Under heavy peak loads, this server buffering robs students of valuable exam time. 
+                        </p>
+                        <p class="proj-desc">
+                            Our team, **NexusOne**, designed a **server-aware countdown mechanism** that automatically pauses the local client timer during server submission buffers and resumes *only* after a secure server validation acknowledgement is received. This ensures 100% timing fairness.
+                        </p>
+
+                        <div class="proj-highlights">
+                            <div class="p-highlight"><i class="fa-solid fa-check"></i> Prevents unfair time loss</div>
+                            <div class="p-highlight"><i class="fa-solid fa-check"></i> Asynchronous API integration</div>
+                            <div class="p-highlight"><i class="fa-solid fa-check"></i> Highly scalable & fault-tolerant</div>
+                        </div>
+
+                        <!-- LIVE INTERACTIVE SIMULATOR WIDGET -->
+                        <div class="simulator-wrapper">
+                            <div class="sim-header">
+                                <div class="sim-title-group">
+                                    <span class="sim-logo"><i class="fa-solid fa-stopwatch"></i></span>
+                                    <div>
+                                        <h4>Live Simulator: Exam Timing System</h4>
+                                        <p>Adjust buffering and click submit to test the pause-resume mechanism</p>
+                                    </div>
+                                </div>
+                                <div class="sim-controls-top">
+                                    <button class="btn-sim-mode active" id="btn-mode-server-aware">Server-Aware Timer (Ours)</button>
+                                    <button class="btn-sim-mode" id="btn-mode-standard">Standard Timer (Unfair)</button>
+                                </div>
+                            </div>
+
+                            <div class="sim-body">
+                                <!-- LEFT PANEL: EXAM CLIENT PORTAL -->
+                                <div class="sim-panel-client">
+                                    <div class="panel-header">
+                                        <span><i class="fa-solid fa-desktop"></i> Student Portal</span>
+                                        <span class="badge-status-portal" id="portal-status-badge">Active</span>
+                                    </div>
+                                    
+                                    <div class="exam-question-box">
+                                        <div class="exam-q-num">Question 4 of 5</div>
+                                        <p class="exam-q-text">Which protocol is primarily used for precise clock synchronization over distributed networks?</p>
+                                        <div class="exam-options">
+                                            <label class="exam-opt-label">
+                                                <input type="radio" name="exam-opt" value="A">
+                                                <span class="opt-custom-radio">A</span>
+                                                <span class="opt-text">NTP (Network Time Protocol)</span>
+                                            </label>
+                                            <label class="exam-opt-label">
+                                                <input type="radio" name="exam-opt" value="B">
+                                                <span class="opt-custom-radio">B</span>
+                                                <span class="opt-text">FTP (File Transfer Protocol)</span>
+                                            </label>
+                                            <label class="exam-opt-label">
+                                                <input type="radio" name="exam-opt" value="C">
+                                                <span class="opt-custom-radio">C</span>
+                                                <span class="opt-text">SMTP (Simple Mail Transfer Protocol)</span>
+                                            </label>
+                                        </div>
+                                        <div class="exam-submit-area">
+                                            <button id="exam-submit-btn" class="btn btn-primary btn-full-width">Submit Answer & Lock</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CENTER PANEL: REAL-TIME SYSTEM CLOCK -->
+                                <div class="sim-panel-clock">
+                                    <div class="clock-display">
+                                        <span class="clock-icon" id="clock-status-icon"><i class="fa-regular fa-clock"></i></span>
+                                        <div class="clock-time" id="sim-timer-display">02:00.00</div>
+                                        <div class="clock-state-text" id="sim-state-text">Timer Running</div>
+                                    </div>
+
+                                    <div class="sim-delay-setting">
+                                        <div class="slider-info">
+                                            <span>Simulated Server Lag:</span>
+                                            <span class="highlight-txt" id="lag-val-display">3.0s</span>
+                                        </div>
+                                        <input type="range" id="server-lag-slider" min="1" max="5" step="0.5" value="3" class="custom-slider">
+                                        <div class="slider-labels">
+                                            <span>1s (Fast)</span>
+                                            <span>5s (Heavy Load)</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sound effect toggle -->
+                                    <div class="sound-toggle-container">
+                                        <label class="sound-toggle">
+                                            <input type="checkbox" id="sound-checkbox" checked>
+                                            <span class="sound-toggle-slider"></span>
+                                        </label>
+                                        <span class="sound-label"><i class="fa-solid fa-volume-high"></i> Play Buzzer Chime on Finish</span>
+                                    </div>
+                                </div>
+
+                                <!-- RIGHT PANEL: STATS & SERVER CONSOLE -->
+                                <div class="sim-panel-server">
+                                    <div class="panel-header">
+                                        <span><i class="fa-solid fa-terminal"></i> Server Console & Live Logs</span>
+                                        <button class="btn-clear-logs" id="btn-clear-sim-logs" title="Clear logs"><i class="fa-solid fa-trash"></i></button>
+                                    </div>
+                                    <div class="server-logs" id="sim-logs-container">
+                                        <div class="log-line text-cyan">[System] Timing System Simulator Initialized.</div>
+                                        <div class="log-line">[System] Server-Aware mechanism enabled. Ready for test.</div>
+                                    </div>
+                                    
+                                    <div class="stats-card">
+                                        <div class="stat-row">
+                                            <span>Cumulative Time Saved:</span>
+                                            <span class="stat-highlight text-cyan" id="stat-saved-time">0.00s</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>Standard Time Lost:</span>
+                                            <span class="stat-highlight text-red" id="stat-lost-time">0.00s</span>
+                                        </div>
+                                        <div class="stat-row">
+                                            <span>Exam Timer Efficiency:</span>
+                                            <span class="stat-highlight text-green" id="stat-efficiency">100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">Certifications</span></h2>
+            <p class="section-subtitle">Academic milestones representing persistent upskilling</p>
+
+            <div class="certifications-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card glass-panel card-glow-indigo">
+                    <div class="cert-icon-container">
+                        <i class="fa-solid fa-award cert-award-icon"></i>
+                    </div>
+                    <h4>Introduction to Software Engineering</h4>
+                    <p class="cert-issuer">IBM / Coursera</p>
+                    <p class="cert-desc">Detailed mastery of core software engineering phases, agile operations, clean practices, and collaborative development frameworks.</p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card glass-panel card-glow-purple">
+                    <div class="cert-icon-container">
+                        <i class="fa-solid fa-graduation-cap cert-award-icon"></i>
+                    </div>
+                    <h4>Fullstack Development Bootcamp</h4>
+                    <p class="cert-issuer">Udemy</p>
+                    <p class="cert-desc">Intensive fullstack syllabus specializing in frontend structures (React, CSS Grid, AJAX) and back-end logic integrations (Node.js, databases).</p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card glass-panel card-glow-cyan">
+                    <div class="cert-icon-container">
+                        <i class="fa-solid fa-shield-halved cert-award-icon"></i>
+                    </div>
+                    <h4>Programming in Java</h4>
+                    <p class="cert-issuer">NPTEL</p>
+                    <p class="cert-desc">Rigorous certified qualification in object-oriented programming, data structures, multithreaded logic, and core Java libraries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="title-glow">Get In Touch</span></h2>
+            <p class="section-subtitle">Let's discuss career paths, collaborations, or internships</p>
+
+            <div class="contact-grid">
+                <!-- Contact Info Panel -->
+                <div class="contact-info glass-panel card-glow-indigo">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out via email or connect with me on LinkedIn. I am always open to discussing new opportunities, analytics projects, or software architecture.</p>
+                    
+                    <div class="info-details">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="info-label">Email Me</span>
+                                <a href="mailto:rudhransaiccs428@gmail.com" class="info-link">rudhransaiccs428@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="info-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/Rudhran%20sai" target="_blank" class="info-link">linkedin.com/in/Rudhran sai</a>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-text">Chennai, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Panel -->
+                <div class="contact-form-panel glass-panel card-glow-purple">
+                    <form id="portfolio-contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="form-name">Your Name</label>
+                                <input type="text" id="form-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Your Email</label>
+                                <input type="email" id="form-email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">Subject</label>
+                            <input type="text" id="form-subject" placeholder="Collaboration / Job Opportunity" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">Message</label>
+                            <textarea id="form-message" rows="5" placeholder="Hi Rudhran, I viewed your portfolio and..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full-width" id="form-submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                        </button>
+                        <div id="form-feedback-msg" class="form-feedback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-copyright">&copy; 2026 Rudhran Sai C. Built with absolute precision & modern web aesthetics.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to Top</a>
+                <span class="footer-sep">|</span>
+                <a href="https://linkedin.com/in/Rudhran%20sai" target="_blank">LinkedIn</a>
+                <span class="footer-sep">|</span>
+                <a href="mailto:rudhransaiccs428@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
