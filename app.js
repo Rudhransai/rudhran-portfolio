@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriter();
     initHeroParticles();
     initActiveNavLinks();
-    initAnalyticsWidget();
     initDeepfakeScanner();
     initExamSimulator();
     initContactForm();
@@ -65,9 +64,8 @@ function initTypewriter() {
     if (!element) return;
 
     const titles = [
-        'Computer Science & Business Systems Student',
-        'Software Engineer',
-        'Data Analyst'
+        'Full Stack Developer',
+        'Software Engineer'
     ];
 
     let titleIndex = 0;
@@ -237,48 +235,7 @@ function initActiveNavLinks() {
     });
 }
 
-// 6. Codec Technologies Analytics Sandbox Sim
-function initAnalyticsWidget() {
-    const cleanBtn = document.getElementById('widget-clean-btn');
-    const rawBar = document.getElementById('raw-bar');
-    const cleanBar = document.getElementById('clean-bar');
-    const latencyVal = document.getElementById('w-latency');
-    const accuracyVal = document.getElementById('w-accuracy');
-
-    if (!cleanBtn || !rawBar || !cleanBar) return;
-
-    let isCleaned = false;
-
-    cleanBtn.addEventListener('click', () => {
-        if (!isCleaned) {
-            cleanBtn.textContent = 'Processing...';
-            cleanBtn.disabled = true;
-
-            setTimeout(() => {
-                rawBar.style.height = '15%';
-                cleanBar.style.height = '95%';
-                latencyVal.textContent = '12ms';
-                accuracyVal.textContent = '99.4%';
-                latencyVal.className = 'highlight-txt text-green';
-                accuracyVal.className = 'highlight-txt text-green';
-                
-                cleanBtn.textContent = 'Reset Data Sim';
-                cleanBtn.disabled = false;
-                isCleaned = true;
-            }, 1000);
-        } else {
-            rawBar.style.height = '90%';
-            cleanBar.style.height = '30%';
-            latencyVal.textContent = '480ms';
-            accuracyVal.textContent = '72%';
-            latencyVal.className = 'highlight-txt';
-            accuracyVal.className = 'highlight-txt';
-            
-            cleanBtn.textContent = 'Clean Raw Data';
-            isCleaned = false;
-        }
-    });
-}
+// 6. Codec Technologies Analytics Sim (Interactive Sandbox Removed per request)
 
 // 7. AI Deepfake Facial Scanner Mesh Mock Logger
 function initDeepfakeScanner() {
@@ -586,7 +543,7 @@ function initExamSimulator() {
     });
 }
 
-// 9. Modern Contact Form Feedback
+// 9. Modern Contact Form Feedback (Web3Forms Asynchronous Mail Submission)
 function initContactForm() {
     const form = document.getElementById('portfolio-contact-form');
     const submitBtn = document.getElementById('form-submit-btn');
@@ -594,25 +551,51 @@ function initContactForm() {
 
     if (!form || !submitBtn) return;
 
-    form.addEventListener('submit', () => {
-        submitBtn.disabled = true;
-        submitBtn.querySelector('.btn-text').textContent = 'Sending Message...';
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
         
-        // Mimic real AJAX dispatch
-        setTimeout(() => {
-            feedback.style.color = '#10b981';
-            feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message was sent successfully. (Simulated)';
-            
-            // Reset input values
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.querySelector('.btn-text').textContent = 'Send Message';
+        submitBtn.disabled = true;
+        const btnText = submitBtn.querySelector('.btn-text');
+        const originalText = btnText.textContent;
+        btnText.textContent = 'Sending...';
+        
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        
+        // Web3Forms API Endpoint
+        feedback.style.color = '#8b5cf6';
+        feedback.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Connecting to mail server...';
 
-            // Clear notice after 5 seconds
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(object)
+        })
+        .then(async (response) => {
+            let jsonRes = await response.json();
+            if (response.status == 200) {
+                feedback.style.color = '#10b981';
+                feedback.innerHTML = '<i class="fa-solid fa-circle-check"></i> Success! Your message has been sent to Rudhran\'s inbox.';
+                form.reset();
+            } else {
+                feedback.style.color = '#ef4444';
+                feedback.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Error: ${jsonRes.message || 'Submission failed.'}`;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            feedback.style.color = '#ef4444';
+            feedback.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Network error. Please try again later.';
+        })
+        .then(() => {
+            submitBtn.disabled = false;
+            btnText.textContent = originalText;
             setTimeout(() => {
                 feedback.innerHTML = '';
             }, 5000);
-
-        }, 1500);
+        });
     });
 }
